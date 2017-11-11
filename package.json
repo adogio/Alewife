@@ -1,0 +1,26 @@
+{
+  "name": "alewife",
+  "version": "1.0.0",
+  "description": ":fish: A index picture/video wall component for React",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adogio/Alewife.git"
+  },
+  "keywords": [
+    "React",
+    "Dogui"
+  ],
+  "author": "WMXPY",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/adogio/Alewife/issues"
+  },
+  "homepage": "https://github.com/adogio/Alewife#readme"
+}
