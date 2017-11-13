@@ -1,6 +1,6 @@
 {
   "name": "alewife",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": ":fish: A index picture/video wall component for React",
   "main": "lib/index.js",
   "directories": {
