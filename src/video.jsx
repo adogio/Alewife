@@ -4,6 +4,11 @@ import RawVideo from './rawVideo';
 
 class AlewifeVideo extends Component {
 
+    constructor(props) {
+        super(props);
+        this.position = this.position.bind(this);
+    }
+
     render() {
         return (
             <div style={{ position: "relative", height: "100%" }}>
@@ -18,16 +23,25 @@ class AlewifeVideo extends Component {
                     poster={this.props.poster}
                 />
                 <div style={{
-                    position: "absolute",
-                    width: "100%",
-                    height: "100%",
-                    left: "0px",
-                    top: "0px"
+                    ...{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                        left: "0px"
+                    }, ...this.position()
                 }}>
                     {this.props.children}
                 </div>
             </div>
         );
+    }
+
+    position() {
+        if (this.props.align === "top") {
+            return { top: "0px" }
+        } else {
+            return { bottom: "0px" }
+        }
     }
 
 }
@@ -52,7 +66,8 @@ AlewifeVideo.propTypes = {
     muted: propTypes.bool,
     loop: propTypes.bool,
     playsInline: propTypes.bool,
-    poster: propTypes.string
+    poster: propTypes.string,
+    align: propTypes.string.isRequired
 }
 
 AlewifeVideo.defaultProps = {
@@ -61,7 +76,8 @@ AlewifeVideo.defaultProps = {
     autoPlay: true,
     muted: false,
     loop: false,
-    playsInline: true
+    playsInline: true,
+    align: "top"
 }
 
 export default AlewifeVideo;

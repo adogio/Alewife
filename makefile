@@ -6,3 +6,6 @@ deploy :
 
 publish :
 	npm publish
+
+t:
+	mocha
