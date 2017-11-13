@@ -26,7 +26,7 @@ class AlewifeVideo extends Component {
                     ...{
                         position: "absolute",
                         width: "100%",
-                        height: "100%",
+                        height: this.props.full ? "100%" : "auto",
                         left: "0px"
                     }, ...this.position()
                 }}>
@@ -67,7 +67,8 @@ AlewifeVideo.propTypes = {
     loop: propTypes.bool,
     playsInline: propTypes.bool,
     poster: propTypes.string,
-    align: propTypes.string.isRequired
+    align: propTypes.string.isRequired,
+    full: propTypes.bool.isRequired
 }
 
 AlewifeVideo.defaultProps = {
@@ -77,6 +78,7 @@ AlewifeVideo.defaultProps = {
     muted: false,
     loop: false,
     playsInline: true,
+    full: true,
     align: "top"
 }
 
